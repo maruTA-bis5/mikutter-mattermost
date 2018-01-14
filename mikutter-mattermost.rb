@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 require_relative "world"
 require "mattermost"
-Plugin.create(:mattermost) do
+Plugin.create(:mikutter_mattermost) do
 
 	world_setting(:mattermost, _("Mattermost")) {
 		label(_("MattermostのURLと、認証に用いるパーソナルアクセストークンを入力してください"))

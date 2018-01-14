@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-require_relative '../models'
 
 module Plugin::Mattermost
 	module API

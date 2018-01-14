@@ -1,4 +1,3 @@
-require_relative '../models'
 
 module Plugin::Mattermost
 	module API
