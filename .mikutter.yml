@@ -1,0 +1,10 @@
+---
+slug: :mattermost
+depends:
+  mikutter: 3.6.0
+  plugin:
+    - world
+version: '0.0.1'
+author: maruTA-bis5
+name: mikutter-mattermost
+description: Mattermost World
