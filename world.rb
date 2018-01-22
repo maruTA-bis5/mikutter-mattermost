@@ -49,7 +49,7 @@ module Plugin::Mattermost
 			@client = Mattermost.new_client(server_url)
 			@client.use_access_token(access_token)
 			notice "connected?: #{@client.connected?}"
-			@user = Plugin::Mattermost::User.new(@client.getMe.parsed_response.symbolize)
+			@user = Plugin::Mattermost::User.new(@client.get_me.parsed_response.symbolize)
 			Plugin.call(:world_modify, self)
 		end
 	end

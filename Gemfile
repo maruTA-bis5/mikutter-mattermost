@@ -1,3 +1,3 @@
 source "https://rubygems.org"
 
-gem "mattermost-api4-ruby", "0.0.5"
+gem "mattermost-api4-ruby", "0.0.6"
