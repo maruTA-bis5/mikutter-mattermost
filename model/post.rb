@@ -8,6 +8,7 @@ module Plugin::Mattermost
 	
 		register :mattermost_post, name: "Post", timeline: true
 	
+		field.string	:id, required: true
 		field.string	:message, required: true
 		field.has	:user, Plugin::Mattermost::User, required: true
 		field.has	:channel, Plugin::Mattermost::Channel, required: true
@@ -22,6 +23,11 @@ module Plugin::Mattermost
 		def created
 			self.create_at
 		end
+
+		def perma_link
+			Diva::URI("#{channel.team.perma_link.to_s}/pl/#{id}")
+		end
+
 	end
 
 end

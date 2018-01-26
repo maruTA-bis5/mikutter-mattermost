@@ -26,6 +26,7 @@ module Plugin::Mattermost
 							notice "in next{}"
 							notice "channel: #{channel}, user: #{user}"
 							msg = Plugin::Mattermost::Post.new(
+								id: post["id"],
 								message: post["message"],
 								user: user,
 								channel: channel,
@@ -52,6 +53,10 @@ module Plugin::Mattermost
 
 			def client
 				@client
+			end
+
+			def server_url
+				client.server
 			end
 		end
 	end

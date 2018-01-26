@@ -11,6 +11,10 @@ module Plugin::Mattermost
 			url = server_url
 		end
 
+		def perma_link
+			Diva::URI(url)
+		end
+
 		def teams
 			# TODO
 			[]

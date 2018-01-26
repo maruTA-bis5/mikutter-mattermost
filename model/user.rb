@@ -49,12 +49,19 @@ module Plugin::Mattermost
 			Skin['notfound.png']
 		end
 
-		def perma_link
-			Diva::URI("#{server.url}/messages/@#{username}")
-		end
+		#def perma_link
+			# TODO <server_url>/<team name>/messages/@<username>
+			#Diva::URI("#{api.server_url}/messages/@#{username}")
+		#end
 
 		def to_s
 			username
+		end
+
+		private
+
+		def api
+			self[:api]
 		end
 	end
 end

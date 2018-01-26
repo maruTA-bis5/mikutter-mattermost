@@ -15,6 +15,10 @@ module Plugin::Mattermost
 			api.channels.public_channels(self)
 		end
 
+		def perma_link
+			Diva::URI("#{api.server_url}/#{name}")
+		end
+
 		private
 
 		def api

@@ -40,7 +40,7 @@ module Plugin::Mattermost
 		end
 
 		def perma_link
-			Diva::URI("#{team.server.url}/#{team.name}/#{name}")
+			Diva::URI("#{team.perma_link.to_s}/channels/#{name}")
 		end
 	end
 end
